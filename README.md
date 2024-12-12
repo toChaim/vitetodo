@@ -17,3 +17,13 @@ add test to vite.config.js
 ```
 
 init git
+
+copy helpers
+copy dataConnection
+create constants.js
+
+copy SettingsPage
+copy NoFoundPage
+
+copy and update PageHeader
+copy and update App
