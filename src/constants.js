@@ -2,6 +2,9 @@
 export const LOCAL_STORAGE_KEY = 'todo';
 export const DEFAULT_DATA = '{ "activites": {}, "blocks": {}, "sessions": {}}';
 
+const [ACTIVITES, BLOCKS, SESSIONS] = ['activites', 'blocks', 'sessions'];
+export const COLLECTIONS = { ACTIVITES, BLOCKS, SESSIONS };
+
 const [PYSICAL, MENTAL, EMOTIONAL, SOCIAL, MATERIAL, PURPOSE] = [
   'PYSICAL',
   'MENTAL',
@@ -12,13 +15,14 @@ const [PYSICAL, MENTAL, EMOTIONAL, SOCIAL, MATERIAL, PURPOSE] = [
 ];
 export const AREAS = { PYSICAL, MENTAL, EMOTIONAL, SOCIAL, MATERIAL, PURPOSE };
 
-const [PENDING, STARTED, DONE, RELEASED] = [
+const [PENDING, STARTED, DONE, RELEASED, ONGOING] = [
   'PENDING',
   'STARTED',
   'DONE',
   'RELEASED',
+  'ONGOING',
 ];
-export const STATUSES = { PENDING, STARTED, DONE, RELEASED };
+export const STATUSES = { PENDING, STARTED, DONE, RELEASED, ONGOING };
 
 export const BaseActivity = {
   name: '',
