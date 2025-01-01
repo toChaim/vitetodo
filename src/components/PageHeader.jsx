@@ -5,8 +5,8 @@ const PageHeader = () => {
     <header>
       <h1>Todo App</h1>
       <nav className="row">
-        <NavLink to="/activies">Activies</NavLink>
-        <NavLink to="/activies/new">Add activie</NavLink>
+        <NavLink to="/activites">Activites</NavLink>
+        <NavLink to="/activites/new">Add activty</NavLink>
         <NavLink to="/blocks">Blocks</NavLink>
         <NavLink to="/blocks/new">Add block</NavLink>
         <NavLink to="/sessions">Sessions</NavLink>
