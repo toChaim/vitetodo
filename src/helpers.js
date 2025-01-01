@@ -89,3 +89,18 @@ export const makeChangeHandler = (setter) => {
     setter(value);
   };
 };
+
+export const makeFilter = (filterObj) => {
+  const filters = Object.entries(filterObj);
+
+  return (record) => {
+    if (!filters.length) {
+      return true;
+    }
+    return filters.every(([key, filter]) => {
+      return typeof filter === 'function'
+        ? filter(record[key])
+        : record[key].includes(filter);
+    });
+  };
+};
