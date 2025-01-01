@@ -1,4 +1,4 @@
-import { getHexString, stringifyReplacer, parserReplacer } from './helpers';
+import { stringifyReplacer, parserReplacer } from './helpers';
 import { LOCAL_STORAGE_KEY, DEFAULT_DATA } from './constants';
 
 // Initialize localStorage if it doesn't exist
@@ -92,7 +92,7 @@ function generateUniqueId(collectionId) {
   let documentId;
   const data = getData();
   do {
-    documentId = getHexString();
+    documentId = self.crypto.randomUUID();
   } while (data[collectionId][documentId]);
   return documentId;
 }
