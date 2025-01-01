@@ -67,9 +67,9 @@ export const previewFile = (file) => {
 };
 
 export const makeChangeHandlerForKey = (data, setData) => {
-  return (key) => {
+  return (key, changeValueFn = (v) => v) => {
     return ({ target: { value } }) => {
-      setData({ ...data, [key]: value });
+      setData({ ...data, [key]: changeValueFn(value) });
     };
   };
 };

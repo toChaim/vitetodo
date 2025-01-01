@@ -26,7 +26,7 @@ export const STATUSES = { PENDING, STARTED, DONE, RELEASED, ONGOING };
 
 export const BaseActivity = {
   name: '',
-  status: '', // enum of
+  status: PENDING, // enum of
   notes: '',
   durration: 5 * 60, // number of seconds
   start: null,

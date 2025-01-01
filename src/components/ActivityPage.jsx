@@ -69,8 +69,8 @@ const ActivityPage = () => {
           durration:{' '}
           <input
             type="number"
-            value={durration}
-            onChange={makeChangeHandler('durration')}
+            value={durration / 60}
+            onChange={makeChangeHandler('durration', (v) => v * 60)}
           />
         </label>
         <button onClick={saveActivity}>Save</button>
