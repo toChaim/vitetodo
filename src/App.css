@@ -65,3 +65,10 @@ h2 {
 textarea {
   height: 100%;
 }
+.ActivityForm {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  max-width: 600px;
+  margin: auto;
+}
