@@ -1,11 +1,16 @@
 # todo app
 
+# todo
+
 1. add scores to activites
+2. add blocksPage and blockPage and block view
+3. add timer and worksession to activityPage
+4. make durration control so it is easier to use show relative urgancy durraation / time per day \* days unil due date
+5. add four quadren page
+
+# done
+
 2. change defalut filter and base activity to use pending
-3. add blocksPage and blockPage and block view
-4. add timer and worksession to activityPage
-5. make durration control so it is easier to use show relative urgancy durraation / time per day \* days unil due date
-6. add four quadren page
 
 # build steps
 

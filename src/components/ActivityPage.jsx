@@ -7,6 +7,7 @@ import {
   updateDocument,
 } from '../dataConnection';
 import { makeChangeHandlerForKey } from '../helpers';
+import TimerControl from './TimerControl';
 
 const ActivityPage = () => {
   const navigate = useNavigate();
@@ -38,13 +39,25 @@ const ActivityPage = () => {
     // scores,
     // subs,
     // tags,
-    // sessions,
+    sessions,
   } = activity;
 
   return (
     <div className="page">
       <div className="head">
         <h2>{name}</h2>
+        <TimerControl
+          save={(data) => {
+            const sessionId = createDocument(COLLECTIONS.SESSIONS, {
+              ...data,
+              activityId,
+            });
+            setActivity({
+              ...activity,
+              sessions: { ...sessions, [sessionId]: data.seconds },
+            });
+          }}
+        />
       </div>
       <div className="ActivityForm">
         <label>
